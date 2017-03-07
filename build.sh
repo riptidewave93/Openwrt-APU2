@@ -57,7 +57,7 @@ fi
 
 Msg "Building Time!!!"
 cd $clonedir
-make -j$cpu_num V=s
+make -j$cpu_num V=s -march=btver2 -mtune=btver2
 
 if [ $? -ne 0 ]; then
   cd - > /dev/null
